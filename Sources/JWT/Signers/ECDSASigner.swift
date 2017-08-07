@@ -1,31 +1,10 @@
-import CTLS
+//import CTLS
 import Foundation
-import Crypto
+//import Crypto
 
 public final class ES256: ECDSASigner {
     public let curve = NID_X9_62_prime256v1
     public let key: Bytes
-    public let method = Hash.Method.sha256
-
-    public init(key: Bytes) {
-        self.key = key
-    }
-}
-
-public final class ES384: ECDSASigner {
-    public let curve = NID_secp384r1
-    public let key: Bytes
-    public let method = Hash.Method.sha384
-
-    public init(key: Bytes) {
-        self.key = key
-    }
-}
-
-public final class ES512: ECDSASigner {
-    public let curve = NID_secp521r1
-    public let key: Bytes
-    public let method = Hash.Method.sha512
 
     public init(key: Bytes) {
         self.key = key
@@ -35,7 +14,6 @@ public final class ES512: ECDSASigner {
 public protocol ECDSASigner: Signer, BytesConvertible {
     var key: Bytes { get }
     var curve: Int32 { get }
-    var method: Hash.Method { get }
     init(key: Bytes)
 }
 
