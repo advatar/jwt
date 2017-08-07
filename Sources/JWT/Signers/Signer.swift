@@ -1,4 +1,5 @@
 import Core
+import ethers
 
 /// Some data structure capable of signing
 /// an array of bytes and later verifying

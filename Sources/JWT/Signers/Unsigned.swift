@@ -1,4 +1,5 @@
 import Core
+import ethers
 
 public struct Unsigned: Signer {
     public let name = "none"
