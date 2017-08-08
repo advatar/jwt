@@ -17,6 +17,7 @@ extension SignatureVerifiable {
     ///     - `JWTError.signatureVerificationFailed` if the signer cannot verify the JWT.
     ///     - Any error thrown while signing or encoding.
     public func verifySignature(using signer: Signer) throws {
+        
         guard signer.name == algorithmName else {
             throw JWTError.wrongAlgorithm
         }

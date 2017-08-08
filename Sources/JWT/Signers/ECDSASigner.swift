@@ -30,7 +30,7 @@ extension ECDSASigner {
         
         let bytes = signature
         
-        //return signature
+        return message
     }
 
     public func verify(signature der: Bytes, message: Bytes) throws {
