@@ -1,5 +1,5 @@
 import Core
-import ethers
+//import ethers
 
 public protocol SignatureVerifiable {
     var algorithmName: String? { get }
