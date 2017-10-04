@@ -1,5 +1,4 @@
 import Core
-//import EtherKit
 
 /// Some data structure capable of signing
 /// an array of bytes and later verifying

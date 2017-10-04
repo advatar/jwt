@@ -64,7 +64,7 @@ final class SignerTests: XCTestCase {
 
     ) throws {
         let signer = try createSigner(privateKey.makeBytes().base64URLDecoded)
-
+       
         let publicBytes = publicKey.makeBytes().base64URLDecoded
         let verifier = try createVerifier?(publicBytes) ?? createSigner(publicBytes)
 
@@ -73,7 +73,7 @@ final class SignerTests: XCTestCase {
         let signature = try signer.sign(message: message.makeBytes())
         try verifier.verify(signature: signature, message: message.makeBytes())
     }
-
+    
     func testES256() throws {
         try checkSigner(
             createSigner: ES256.init,
